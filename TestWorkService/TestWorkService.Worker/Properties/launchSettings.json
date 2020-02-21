@@ -1,0 +1,13 @@
+﻿{
+  "profiles": {
+    "TestWorkService.Worker": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "applicationUrl": "http://localhost:5070;https://localhost:5071",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
