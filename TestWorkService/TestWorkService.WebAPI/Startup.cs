@@ -70,7 +70,7 @@ namespace TestWorkService.WebAPI
         /// <param name="app"></param>
         /// <param name="env"></param>
         /// <param name="provider"></param>
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IServiceProvider provider)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             app.UseStaticFiles();
 

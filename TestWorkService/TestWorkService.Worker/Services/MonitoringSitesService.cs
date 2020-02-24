@@ -12,11 +12,19 @@ using TestWorkService.Worker.Services.Interfaces;
 
 namespace TestWorkService.Worker.Services
 {
+    /// <summary>
+    /// Monitoring sites service
+    /// </summary>
     public class MonitoringSitesService : IMonitoringSitesService
     {
         private readonly ILogger<Worker> _logger;
         private readonly ServiceConfigurations _serviceConfigurations;
 
+        /// <summary>
+        /// Monitoring sites service builder
+        /// </summary>
+        /// <param name="logger"></param>
+        /// <param name="configuration"></param>
         public MonitoringSitesService(ILogger<Worker> logger, IConfiguration configuration)
         {
             _logger = logger;
@@ -28,6 +36,10 @@ namespace TestWorkService.Worker.Services
                     .Configure(this._serviceConfigurations);
         }
 
+        /// <summary>
+        /// Method work
+        /// </summary>
+        /// <returns></returns>
         public async Task<IList<MonitoringResult>> Work()
         {
             IList<MonitoringResult> results = new List<MonitoringResult>();
@@ -44,11 +56,9 @@ namespace TestWorkService.Worker.Services
 
                 try
                 {
-                    using (Ping ping = new Ping())
-                    {
-                        var response = ping.Send(host);
-                        result.Status = response.Status.ToString();
-                    }
+                    using Ping ping = new Ping();
+                    var response = ping.Send(host);
+                    result.Status = response.Status.ToString();
                 }
                 catch (Exception ex)
                 {

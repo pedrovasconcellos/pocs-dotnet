@@ -4,5 +4,105 @@
         <name>TestWorkService.Worker</name>
     </assembly>
     <members>
+        <member name="T:TestWorkService.Worker.Models.MonitoringResult">
+            <summary>
+            Monitoring result
+            </summary>
+        </member>
+        <member name="P:TestWorkService.Worker.Models.MonitoringResult.Horary">
+            <summary>
+            Horary
+            </summary>
+        </member>
+        <member name="P:TestWorkService.Worker.Models.MonitoringResult.Host">
+            <summary>
+            Host
+            </summary>
+        </member>
+        <member name="P:TestWorkService.Worker.Models.MonitoringResult.Status">
+            <summary>
+            Status
+            </summary>
+        </member>
+        <member name="P:TestWorkService.Worker.Models.MonitoringResult.Exception">
+            <summary>
+            Exception
+            </summary>
+        </member>
+        <member name="T:TestWorkService.Worker.Models.ServiceConfigurations">
+            <summary>
+            Service configurations
+            </summary>
+        </member>
+        <member name="P:TestWorkService.Worker.Models.ServiceConfigurations.Hosts">
+            <summary>
+            Hosts
+            </summary>
+        </member>
+        <member name="P:TestWorkService.Worker.Models.ServiceConfigurations.Interval">
+            <summary>
+            Interval
+            </summary>
+        </member>
+        <member name="T:TestWorkService.Worker.Program">
+            <summary>
+            Program
+            </summary>
+        </member>
+        <member name="M:TestWorkService.Worker.Program.Main(System.String[])">
+            <summary>
+            Main
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="T:TestWorkService.Worker.Services.Interfaces.IMonitoringSitesService">
+            <summary>
+            Iinterface monitoring sites service
+            </summary>
+        </member>
+        <member name="M:TestWorkService.Worker.Services.Interfaces.IMonitoringSitesService.Work">
+            <summary>
+            Method
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:TestWorkService.Worker.Services.MonitoringSitesService">
+            <summary>
+            Monitoring sites service
+            </summary>
+        </member>
+        <member name="M:TestWorkService.Worker.Services.MonitoringSitesService.#ctor(Microsoft.Extensions.Logging.ILogger{TestWorkService.Worker.Worker},Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Monitoring sites service builder
+            </summary>
+            <param name="logger"></param>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:TestWorkService.Worker.Services.MonitoringSitesService.Work">
+            <summary>
+            Method work
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:TestWorkService.Worker.Worker">
+            <summary>
+            Worker
+            </summary>
+        </member>
+        <member name="M:TestWorkService.Worker.Worker.#ctor(Microsoft.Extensions.Logging.ILogger{TestWorkService.Worker.Worker},Microsoft.Extensions.Configuration.IConfiguration,TestWorkService.Worker.Services.Interfaces.IMonitoringSitesService)">
+            <summary>
+            Worker builder
+            </summary>
+            <param name="logger"></param>
+            <param name="configuration"></param>
+            <param name="service"></param>
+        </member>
+        <member name="M:TestWorkService.Worker.Worker.ExecuteAsync(System.Threading.CancellationToken)">
+            <summary>
+            Execute async
+            </summary>
+            <param name="stoppingToken"></param>
+            <returns></returns>
+        </member>
     </members>
 </doc>

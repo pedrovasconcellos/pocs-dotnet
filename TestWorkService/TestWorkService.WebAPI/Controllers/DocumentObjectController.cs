@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -44,7 +45,7 @@ namespace TestWorkService.WebAPI.Controllers
 
             var result = default(List<string>);
             if (!string.IsNullOrEmpty(name))
-                result = _names.Where(x => x.Contains(name)).ToList();
+                result = _names.Where(x => x.Contains(name, StringComparison.OrdinalIgnoreCase)).ToList();
             else
                 result = _names.ToList();
 
